@@ -13,14 +13,14 @@
 <h1>Welcome</h1><p class="lead">My name is Jesus E. Lopez. I am a creative individual and have found a way of expressing my thoughts, anger, beliefs and reasons to the world through writing. I was hesitant to call it poetry because the definition of poetry seems limited. Sometimes it is not rhythmic or metrical or pleasurable, beautiful or elevated as the definition would have you believe. Sometimes it is dark and foul and if you stepped on it, it would ruin your shoes. I say sometimes because yes, some of it is happy, funny or pleasurable but is not limited to any one fashion. Some are rants or continuous thoughts that have no intention of form except for it to flow.</p><p class="lead">All writings have meaning behind them, at least mine do, but I write in a way that leaves the interpretation up to the reader. If you are curious to any personal meanings I have, feel free to ask. Enjoy!</p>
 <h2>A few to start with</h2><ul class="index"><li><a href="poems/angry-mess.html">Angry Mess</a><span>2006</span></li><li><a href="poems/torn.html">Torn</a><span>2007</span></li><li><a href="poems/content.html">Content</a><span>2010</span></li></ul><p style="margin-top:20px"><a href="poems.html">All the poems &rarr;</a></p>
 </div></div></div></div>
-<div id="footer">&copy; JELI Writings<div class="credit">Pencil sound: &ldquo;Pencil Scratchings&rdquo; by gypsygirl (public domain).</div></div>
+<div id="footer">&copy; JELI Writings<div class="credit">Sound: &ldquo;Writing on Paper&rdquo; by freesound_community (Pixabay).</div></div>
 </div></div>
 <button id="snd" type="button" aria-pressed="false" title="Pencil sound">&#9834; Pencil sound: off</button>
 <script>
 (function(){
 var root="",key="jeliPencil",tkey="jeliPencilT",on=false,t0=0;
 try{on=localStorage.getItem(key)!=="off";t0=parseFloat(localStorage.getItem(tkey))||0}catch(e){on=true}
-var a=new Audio(root+"audio/pencil.ogg");a.loop=true;a.volume=0.35;a.preload="auto";
+var a=new Audio(root+"audio/pencil.mp3");a.loop=true;a.volume=0.2;a.preload="auto";
 var b=document.getElementById("snd");
 function label(p){b.textContent="♪ Pencil sound: "+(p?"on":(on?"tap to start":"off"));b.setAttribute("aria-pressed",p?"true":"false")}
 function start(){var r=a.play();if(r&&r.then){r.then(function(){label(true)}).catch(function(){label(false);arm()})}}

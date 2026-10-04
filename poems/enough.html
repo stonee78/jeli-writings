@@ -23,14 +23,14 @@ Now released, how could I ever believe &quot;defeated&quot; is what I would get?
 With a new mission in mind, sights set to the stars while I sing a new tune.<br>
 This lesson I&#x27;ve learned I took it to heart, now here we go to the next level, straight to the moon!</p><p class="meta">2011</p><div class="pn"><span><a href="destiny.html">&larr; Destiny</a></span><span><a href="wedding.html">Wedding &rarr;</a></span></div>
 </div></div></div></div>
-<div id="footer">&copy; JELI Writings<div class="credit">Pencil sound: &ldquo;Pencil Scratchings&rdquo; by gypsygirl (public domain).</div></div>
+<div id="footer">&copy; JELI Writings<div class="credit">Sound: &ldquo;Writing on Paper&rdquo; by freesound_community (Pixabay).</div></div>
 </div></div>
 <button id="snd" type="button" aria-pressed="false" title="Pencil sound">&#9834; Pencil sound: off</button>
 <script>
 (function(){
 var root="../",key="jeliPencil",tkey="jeliPencilT",on=false,t0=0;
 try{on=localStorage.getItem(key)!=="off";t0=parseFloat(localStorage.getItem(tkey))||0}catch(e){on=true}
-var a=new Audio(root+"audio/pencil.ogg");a.loop=true;a.volume=0.35;a.preload="auto";
+var a=new Audio(root+"audio/pencil.mp3");a.loop=true;a.volume=0.2;a.preload="auto";
 var b=document.getElementById("snd");
 function label(p){b.textContent="♪ Pencil sound: "+(p?"on":(on?"tap to start":"off"));b.setAttribute("aria-pressed",p?"true":"false")}
 function start(){var r=a.play();if(r&&r.then){r.then(function(){label(true)}).catch(function(){label(false);arm()})}}

@@ -27,14 +27,14 @@ Tomorrow hasn&#x27;t come yet and today was such a surprise.<br>
 Once more Ink has touched paper, the chains are shifting I sense.<br>
 That beast with wings of a crow has left it&#x27;s layer; let the healing commence.</p><p class="meta">2006</p><div class="pn"><span><a href="whats-that.html">&larr; What&#x27;s That</a></span><span><a href="torn.html">Torn &rarr;</a></span></div>
 </div></div></div></div>
-<div id="footer">&copy; JELI Writings<div class="credit">Pencil sound: &ldquo;Pencil Scratchings&rdquo; by gypsygirl (public domain).</div></div>
+<div id="footer">&copy; JELI Writings<div class="credit">Sound: &ldquo;Writing on Paper&rdquo; by freesound_community (Pixabay).</div></div>
 </div></div>
 <button id="snd" type="button" aria-pressed="false" title="Pencil sound">&#9834; Pencil sound: off</button>
 <script>
 (function(){
 var root="../",key="jeliPencil",tkey="jeliPencilT",on=false,t0=0;
 try{on=localStorage.getItem(key)!=="off";t0=parseFloat(localStorage.getItem(tkey))||0}catch(e){on=true}
-var a=new Audio(root+"audio/pencil.ogg");a.loop=true;a.volume=0.35;a.preload="auto";
+var a=new Audio(root+"audio/pencil.mp3");a.loop=true;a.volume=0.2;a.preload="auto";
 var b=document.getElementById("snd");
 function label(p){b.textContent="♪ Pencil sound: "+(p?"on":(on?"tap to start":"off"));b.setAttribute("aria-pressed",p?"true":"false")}
 function start(){var r=a.play();if(r&&r.then){r.then(function(){label(true)}).catch(function(){label(false);arm()})}}

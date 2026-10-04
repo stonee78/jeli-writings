@@ -12,14 +12,14 @@
 <div id="contentbtm"><div id="contenttop"><div id="content"><div class="inner">
 <h1>Poems</h1><div class="yr">2000</div><ul class="index"><li><a href="poems/my-life.html">My Life</a></li><li><a href="poems/through-my-eyes.html">Through My Eyes</a></li></ul><div class="yr">2001</div><ul class="index"><li><a href="poems/maryjane.html">Maryjane</a></li></ul><div class="yr">2002</div><ul class="index"><li><a href="poems/jesse.html">Jesse</a></li></ul><div class="yr">2003</div><ul class="index"><li><a href="poems/dark-night.html">Dark Night</a></li><li><a href="poems/faith.html">Faith</a></li><li><a href="poems/untitled.html">Untitled</a></li><li><a href="poems/whats-that.html">What&#x27;s That</a></li></ul><div class="yr">2006</div><ul class="index"><li><a href="poems/angry-mess.html">Angry Mess</a></li></ul><div class="yr">2007</div><ul class="index"><li><a href="poems/torn.html">Torn</a></li></ul><div class="yr">2009</div><ul class="index"><li><a href="poems/goodbye.html">Goodbye</a></li></ul><div class="yr">2010</div><ul class="index"><li><a href="poems/content.html">Content</a></li><li><a href="poems/kids.html">Kids</a></li><li><a href="poems/listen.html">Listen</a></li><li><a href="poems/low-point.html">Low Point</a></li><li><a href="poems/time.html">Time</a></li></ul><div class="yr">2011</div><ul class="index"><li><a href="poems/destiny.html">Destiny</a></li><li><a href="poems/enough.html">Enough</a></li><li><a href="poems/wedding.html">Wedding</a></li></ul><div class="yr">2013</div><ul class="index"><li><a href="poems/young-one.html">Young One</a></li></ul><div class="yr">Undated</div><ul class="index"><li><a href="poems/another-one.html">Another One</a></li><li><a href="poems/daze.html">Daze</a></li><li><a href="poems/in-a-hole.html">In a Hole</a></li><li><a href="poems/never-scared.html">Never Scared</a></li><li><a href="poems/new.html">New</a></li><li><a href="poems/something-lost.html">Something Lost</a></li><li><a href="poems/v-day.html">V Day</a></li></ul>
 </div></div></div></div>
-<div id="footer">&copy; JELI Writings<div class="credit">Pencil sound: &ldquo;Pencil Scratchings&rdquo; by gypsygirl (public domain).</div></div>
+<div id="footer">&copy; JELI Writings<div class="credit">Sound: &ldquo;Writing on Paper&rdquo; by freesound_community (Pixabay).</div></div>
 </div></div>
 <button id="snd" type="button" aria-pressed="false" title="Pencil sound">&#9834; Pencil sound: off</button>
 <script>
 (function(){
 var root="",key="jeliPencil",tkey="jeliPencilT",on=false,t0=0;
 try{on=localStorage.getItem(key)!=="off";t0=parseFloat(localStorage.getItem(tkey))||0}catch(e){on=true}
-var a=new Audio(root+"audio/pencil.ogg");a.loop=true;a.volume=0.35;a.preload="auto";
+var a=new Audio(root+"audio/pencil.mp3");a.loop=true;a.volume=0.2;a.preload="auto";
 var b=document.getElementById("snd");
 function label(p){b.textContent="♪ Pencil sound: "+(p?"on":(on?"tap to start":"off"));b.setAttribute("aria-pressed",p?"true":"false")}
 function start(){var r=a.play();if(r&&r.then){r.then(function(){label(true)}).catch(function(){label(false);arm()})}}
