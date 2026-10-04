@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>V Day | JELI Writings</title>
+<meta name="description" content="Happy Valentine&#x27;s Day. To my life, my wife, my lover, my friend.">
+<meta property="og:title" content="V Day | JELI Writings"><meta property="og:description" content="Happy Valentine&#x27;s Day. To my life, my wife, my lover, my friend."><meta property="og:type" content="website">
+<link rel="stylesheet" href="../style.css">
+</head><body><div id="wrapper"><div id="container">
+<div class="title"><a href="../index.html">JELI Writings</a></div>
+<div id="header"><img src="../img/header.jpg" alt="A path through a forest"></div>
+<div id="navigation"><ul><li><a href="../index.html">Home</a></li><li id="active"><a href="../poems.html">Poems</a></li></ul></div>
+<div id="contentbtm"><div id="contenttop"><div id="content"><div class="inner">
+<h1>V Day</h1><p class="stanza">Happy Valentine&#x27;s Day.<br>
+To my life, my wife, my lover, my friend.<br>
+Some things I&#x27;ve gotta say.<br>
+Number 10. Is how many V days we&#x27;ve shared.<br>
+Although not all good, we would not be here if I didn&#x27;t care.<br>
+Thank you for sticking around.<br>
+All this hard work I&#x27;ve done, I promise not to let you down.<br>
+Don&#x27;t forget I&#x27;m only human.<br>
+So for mistakes I&#x27;ve made, forgiveness can u lend?</p><div class="pn"><span><a href="something-lost.html">&larr; Something Lost</a></span><span></span></div>
+</div></div></div></div>
+<div id="footer">&copy; JELI Writings<div class="credit">Pencil sound: &ldquo;Pencil Scratchings&rdquo; by gypsygirl (public domain).</div></div>
+</div></div>
+<button id="snd" type="button" aria-pressed="false" title="Pencil sound">&#9834; Pencil sound: off</button>
+<script>
+(function(){
+var root="../",key="jeliPencil",tkey="jeliPencilT",on=false,t0=0;
+try{on=localStorage.getItem(key)!=="off";t0=parseFloat(localStorage.getItem(tkey))||0}catch(e){on=true}
+var a=new Audio(root+"audio/pencil.ogg");a.loop=true;a.volume=0.35;a.preload="auto";
+var b=document.getElementById("snd");
+function label(p){b.textContent="♪ Pencil sound: "+(p?"on":(on?"tap to start":"off"));b.setAttribute("aria-pressed",p?"true":"false")}
+function start(){var r=a.play();if(r&&r.then){r.then(function(){label(true)}).catch(function(){label(false);arm()})}}
+function arm(){var h=function(){["pointerdown","keydown","touchstart"].forEach(function(e){document.removeEventListener(e,h)});if(on)start()};["pointerdown","keydown","touchstart"].forEach(function(e){document.addEventListener(e,h)})}
+a.addEventListener("loadedmetadata",function(){if(t0&&t0<a.duration)try{a.currentTime=t0}catch(e){}});
+b.addEventListener("click",function(){on=!on;try{localStorage.setItem(key,on?"on":"off")}catch(e){}if(on)start();else{a.pause();label(false)}});
+window.addEventListener("pagehide",function(){try{localStorage.setItem(tkey,String(a.currentTime||0))}catch(e){}});
+label(false);if(on)start();
+})();
+</script>
+</body></html>

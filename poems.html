@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poems | JELI Writings</title>
+<meta name="description" content="Poems by Jesse Lopez, written between 2000 and 2013.">
+<meta property="og:title" content="Poems | JELI Writings"><meta property="og:description" content="Poems by Jesse Lopez, written between 2000 and 2013."><meta property="og:type" content="website">
+<link rel="stylesheet" href="style.css">
+</head><body><div id="wrapper"><div id="container">
+<div class="title"><a href="index.html">JELI Writings</a></div>
+<div id="header"><img src="img/header.jpg" alt="A path through a forest"></div>
+<div id="navigation"><ul><li><a href="index.html">Home</a></li><li id="active"><a href="poems.html">Poems</a></li></ul></div>
+<div id="contentbtm"><div id="contenttop"><div id="content"><div class="inner">
+<h1>Poems</h1><div class="yr">2000</div><ul class="index"><li><a href="poems/my-life.html">My Life</a></li><li><a href="poems/through-my-eyes.html">Through My Eyes</a></li></ul><div class="yr">2001</div><ul class="index"><li><a href="poems/maryjane.html">Maryjane</a></li></ul><div class="yr">2002</div><ul class="index"><li><a href="poems/jesse.html">Jesse</a></li></ul><div class="yr">2003</div><ul class="index"><li><a href="poems/dark-night.html">Dark Night</a></li><li><a href="poems/faith.html">Faith</a></li><li><a href="poems/untitled.html">Untitled</a></li><li><a href="poems/whats-that.html">What&#x27;s That</a></li></ul><div class="yr">2006</div><ul class="index"><li><a href="poems/angry-mess.html">Angry Mess</a></li></ul><div class="yr">2007</div><ul class="index"><li><a href="poems/torn.html">Torn</a></li></ul><div class="yr">2009</div><ul class="index"><li><a href="poems/goodbye.html">Goodbye</a></li></ul><div class="yr">2010</div><ul class="index"><li><a href="poems/content.html">Content</a></li><li><a href="poems/kids.html">Kids</a></li><li><a href="poems/listen.html">Listen</a></li><li><a href="poems/low-point.html">Low Point</a></li><li><a href="poems/time.html">Time</a></li></ul><div class="yr">2011</div><ul class="index"><li><a href="poems/destiny.html">Destiny</a></li><li><a href="poems/enough.html">Enough</a></li><li><a href="poems/wedding.html">Wedding</a></li></ul><div class="yr">2013</div><ul class="index"><li><a href="poems/young-one.html">Young One</a></li></ul><div class="yr">Undated</div><ul class="index"><li><a href="poems/another-one.html">Another One</a></li><li><a href="poems/daze.html">Daze</a></li><li><a href="poems/in-a-hole.html">In a Hole</a></li><li><a href="poems/never-scared.html">Never Scared</a></li><li><a href="poems/new.html">New</a></li><li><a href="poems/something-lost.html">Something Lost</a></li><li><a href="poems/v-day.html">V Day</a></li></ul>
+</div></div></div></div>
+<div id="footer">&copy; JELI Writings<div class="credit">Pencil sound: &ldquo;Pencil Scratchings&rdquo; by gypsygirl (public domain).</div></div>
+</div></div>
+<button id="snd" type="button" aria-pressed="false" title="Pencil sound">&#9834; Pencil sound: off</button>
+<script>
+(function(){
+var root="",key="jeliPencil",tkey="jeliPencilT",on=false,t0=0;
+try{on=localStorage.getItem(key)!=="off";t0=parseFloat(localStorage.getItem(tkey))||0}catch(e){on=true}
+var a=new Audio(root+"audio/pencil.ogg");a.loop=true;a.volume=0.35;a.preload="auto";
+var b=document.getElementById("snd");
+function label(p){b.textContent="♪ Pencil sound: "+(p?"on":(on?"tap to start":"off"));b.setAttribute("aria-pressed",p?"true":"false")}
+function start(){var r=a.play();if(r&&r.then){r.then(function(){label(true)}).catch(function(){label(false);arm()})}}
+function arm(){var h=function(){["pointerdown","keydown","touchstart"].forEach(function(e){document.removeEventListener(e,h)});if(on)start()};["pointerdown","keydown","touchstart"].forEach(function(e){document.addEventListener(e,h)})}
+a.addEventListener("loadedmetadata",function(){if(t0&&t0<a.duration)try{a.currentTime=t0}catch(e){}});
+b.addEventListener("click",function(){on=!on;try{localStorage.setItem(key,on?"on":"off")}catch(e){}if(on)start();else{a.pause();label(false)}});
+window.addEventListener("pagehide",function(){try{localStorage.setItem(tkey,String(a.currentTime||0))}catch(e){}});
+label(false);if(on)start();
+})();
+</script>
+</body></html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Young One | JELI Writings</title>
+<meta name="description" content="Young one. Waiting to get over life. When will it be better,">
+<meta property="og:title" content="Young One | JELI Writings"><meta property="og:description" content="Young one. Waiting to get over life. When will it be better,"><meta property="og:type" content="website">
+<link rel="stylesheet" href="../style.css">
+</head><body><div id="wrapper"><div id="container">
+<div class="title"><a href="../index.html">JELI Writings</a></div>
+<div id="header"><img src="../img/header.jpg" alt="A path through a forest"></div>
+<div id="navigation"><ul><li><a href="../index.html">Home</a></li><li id="active"><a href="../poems.html">Poems</a></li></ul></div>
+<div id="contentbtm"><div id="contenttop"><div id="content"><div class="inner">
+<h1>Young One</h1><p class="stanza">Young one. Waiting to get over life.<br>
+When will it be better,<br>
+Follow all advice, how to overcome strife,<br>
+Be grown, an adult with kids and a wife.<br>
+What you don&#x27;t know is the struggle never dies.<br>
+Young pain is new.<br>
+Obscuring your view. Now,<br>
+Very familiar pain as a reminder.<br>
+At this age isn&#x27;t life meant to be kinder?<br>
+One can lose their mind dealing with the daily grind.<br>
+Callus &amp; pessimism take over without thought.<br>
+You must remember Love, Faith, Patience is what Jesus taught.<br>
+Understand letting go. Although it may seem so,<br>
+Misery causing events, You have no control.<br>
+Follow the light because in the portrait of life,<br>
+We are a Grand Plan revealed through Gods&#x27; might.</p><p class="meta">2013</p><div class="pn"><span><a href="wedding.html">&larr; Wedding</a></span><span><a href="another-one.html">Another One &rarr;</a></span></div>
+</div></div></div></div>
+<div id="footer">&copy; JELI Writings<div class="credit">Pencil sound: &ldquo;Pencil Scratchings&rdquo; by gypsygirl (public domain).</div></div>
+</div></div>
+<button id="snd" type="button" aria-pressed="false" title="Pencil sound">&#9834; Pencil sound: off</button>
+<script>
+(function(){
+var root="../",key="jeliPencil",tkey="jeliPencilT",on=false,t0=0;
+try{on=localStorage.getItem(key)!=="off";t0=parseFloat(localStorage.getItem(tkey))||0}catch(e){on=true}
+var a=new Audio(root+"audio/pencil.ogg");a.loop=true;a.volume=0.35;a.preload="auto";
+var b=document.getElementById("snd");
+function label(p){b.textContent="♪ Pencil sound: "+(p?"on":(on?"tap to start":"off"));b.setAttribute("aria-pressed",p?"true":"false")}
+function start(){var r=a.play();if(r&&r.then){r.then(function(){label(true)}).catch(function(){label(false);arm()})}}
+function arm(){var h=function(){["pointerdown","keydown","touchstart"].forEach(function(e){document.removeEventListener(e,h)});if(on)start()};["pointerdown","keydown","touchstart"].forEach(function(e){document.addEventListener(e,h)})}
+a.addEventListener("loadedmetadata",function(){if(t0&&t0<a.duration)try{a.currentTime=t0}catch(e){}});
+b.addEventListener("click",function(){on=!on;try{localStorage.setItem(key,on?"on":"off")}catch(e){}if(on)start();else{a.pause();label(false)}});
+window.addEventListener("pagehide",function(){try{localStorage.setItem(tkey,String(a.currentTime||0))}catch(e){}});
+label(false);if(on)start();
+})();
+</script>
+</body></html>

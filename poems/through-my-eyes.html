@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Through My Eyes | JELI Writings</title>
+<meta name="description" content="Through my eyes only Will you see the road,">
+<meta property="og:title" content="Through My Eyes | JELI Writings"><meta property="og:description" content="Through my eyes only Will you see the road,"><meta property="og:type" content="website">
+<link rel="stylesheet" href="../style.css">
+</head><body><div id="wrapper"><div id="container">
+<div class="title"><a href="../index.html">JELI Writings</a></div>
+<div id="header"><img src="../img/header.jpg" alt="A path through a forest"></div>
+<div id="navigation"><ul><li><a href="../index.html">Home</a></li><li id="active"><a href="../poems.html">Poems</a></li></ul></div>
+<div id="contentbtm"><div id="contenttop"><div id="content"><div class="inner">
+<h1>Through My Eyes</h1><p class="stanza">Through my eyes only<br>
+Will you see the road,<br>
+The anger, the journey, the pain.<br>
+For the sake of being free from<br>
+The jealousy around me.<br>
+Through the times I struggled in vain.<br>
+Look in through my eyes.<br>
+Did you ever think life would be like this?<br>
+One world, one life, one love.<br>
+Was the thought His?<br>
+But what do they think<br>
+Keeps us so called sane.<br>
+One of many trying, not most,<br>
+To stay out of the rain.</p><p class="meta">2000</p><div class="pn"><span><a href="my-life.html">&larr; My Life</a></span><span><a href="maryjane.html">Maryjane &rarr;</a></span></div>
+</div></div></div></div>
+<div id="footer">&copy; JELI Writings<div class="credit">Pencil sound: &ldquo;Pencil Scratchings&rdquo; by gypsygirl (public domain).</div></div>
+</div></div>
+<button id="snd" type="button" aria-pressed="false" title="Pencil sound">&#9834; Pencil sound: off</button>
+<script>
+(function(){
+var root="../",key="jeliPencil",tkey="jeliPencilT",on=false,t0=0;
+try{on=localStorage.getItem(key)!=="off";t0=parseFloat(localStorage.getItem(tkey))||0}catch(e){on=true}
+var a=new Audio(root+"audio/pencil.ogg");a.loop=true;a.volume=0.35;a.preload="auto";
+var b=document.getElementById("snd");
+function label(p){b.textContent="♪ Pencil sound: "+(p?"on":(on?"tap to start":"off"));b.setAttribute("aria-pressed",p?"true":"false")}
+function start(){var r=a.play();if(r&&r.then){r.then(function(){label(true)}).catch(function(){label(false);arm()})}}
+function arm(){var h=function(){["pointerdown","keydown","touchstart"].forEach(function(e){document.removeEventListener(e,h)});if(on)start()};["pointerdown","keydown","touchstart"].forEach(function(e){document.addEventListener(e,h)})}
+a.addEventListener("loadedmetadata",function(){if(t0&&t0<a.duration)try{a.currentTime=t0}catch(e){}});
+b.addEventListener("click",function(){on=!on;try{localStorage.setItem(key,on?"on":"off")}catch(e){}if(on)start();else{a.pause();label(false)}});
+window.addEventListener("pagehide",function(){try{localStorage.setItem(tkey,String(a.currentTime||0))}catch(e){}});
+label(false);if(on)start();
+})();
+</script>
+</body></html>

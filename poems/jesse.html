@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jesse | JELI Writings</title>
+<meta name="description" content="As paper soaks ink again, Schools of memories and">
+<meta property="og:title" content="Jesse | JELI Writings"><meta property="og:description" content="As paper soaks ink again, Schools of memories and"><meta property="og:type" content="website">
+<link rel="stylesheet" href="../style.css">
+</head><body><div id="wrapper"><div id="container">
+<div class="title"><a href="../index.html">JELI Writings</a></div>
+<div id="header"><img src="../img/header.jpg" alt="A path through a forest"></div>
+<div id="navigation"><ul><li><a href="../index.html">Home</a></li><li id="active"><a href="../poems.html">Poems</a></li></ul></div>
+<div id="contentbtm"><div id="contenttop"><div id="content"><div class="inner">
+<h1>Jesse</h1><p class="stanza">As paper soaks ink again,<br>
+Schools of memories and<br>
+Disoriented pains surface again.<br>
+But the new has taken its space.<br>
+To think everything has an end,<br>
+Just the beginning looking at the face<br>
+Into teary eyes of confused pain.<br>
+Windows to the soul they say,<br>
+But who can see this cloudy entity<br>
+Of the person you call Jesse.</p><p class="meta">2002</p><div class="pn"><span><a href="maryjane.html">&larr; Maryjane</a></span><span><a href="dark-night.html">Dark Night &rarr;</a></span></div>
+</div></div></div></div>
+<div id="footer">&copy; JELI Writings<div class="credit">Pencil sound: &ldquo;Pencil Scratchings&rdquo; by gypsygirl (public domain).</div></div>
+</div></div>
+<button id="snd" type="button" aria-pressed="false" title="Pencil sound">&#9834; Pencil sound: off</button>
+<script>
+(function(){
+var root="../",key="jeliPencil",tkey="jeliPencilT",on=false,t0=0;
+try{on=localStorage.getItem(key)!=="off";t0=parseFloat(localStorage.getItem(tkey))||0}catch(e){on=true}
+var a=new Audio(root+"audio/pencil.ogg");a.loop=true;a.volume=0.35;a.preload="auto";
+var b=document.getElementById("snd");
+function label(p){b.textContent="♪ Pencil sound: "+(p?"on":(on?"tap to start":"off"));b.setAttribute("aria-pressed",p?"true":"false")}
+function start(){var r=a.play();if(r&&r.then){r.then(function(){label(true)}).catch(function(){label(false);arm()})}}
+function arm(){var h=function(){["pointerdown","keydown","touchstart"].forEach(function(e){document.removeEventListener(e,h)});if(on)start()};["pointerdown","keydown","touchstart"].forEach(function(e){document.addEventListener(e,h)})}
+a.addEventListener("loadedmetadata",function(){if(t0&&t0<a.duration)try{a.currentTime=t0}catch(e){}});
+b.addEventListener("click",function(){on=!on;try{localStorage.setItem(key,on?"on":"off")}catch(e){}if(on)start();else{a.pause();label(false)}});
+window.addEventListener("pagehide",function(){try{localStorage.setItem(tkey,String(a.currentTime||0))}catch(e){}});
+label(false);if(on)start();
+})();
+</script>
+</body></html>

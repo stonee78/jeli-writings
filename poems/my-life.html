@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Life | JELI Writings</title>
+<meta name="description" content="My life. Picture a string of humiliation, a ball of hate, an ocean of anger.">
+<meta property="og:title" content="My Life | JELI Writings"><meta property="og:description" content="My life. Picture a string of humiliation, a ball of hate, an ocean of anger."><meta property="og:type" content="website">
+<link rel="stylesheet" href="../style.css">
+</head><body><div id="wrapper"><div id="container">
+<div class="title"><a href="../index.html">JELI Writings</a></div>
+<div id="header"><img src="../img/header.jpg" alt="A path through a forest"></div>
+<div id="navigation"><ul><li><a href="../index.html">Home</a></li><li id="active"><a href="../poems.html">Poems</a></li></ul></div>
+<div id="contentbtm"><div id="contenttop"><div id="content"><div class="inner">
+<h1>My Life</h1><p class="stanza">My life. Picture a string of humiliation,<br>
+a ball of hate, an ocean of anger.<br>
+Reassuring the end.<br>
+How much longer can I take?<br>
+You have no meaning,<br>
+like words written on a cake.<br>
+Remember the times scared and alone?<br>
+The only time I needed you,<br>
+you beckoned to postpone.</p><p class="meta">2000</p><p class="note"><strong>Author&rsquo;s note, as printed in <em>Woven Magic</em></strong><br><strong>Jesus E. Lopez, Corpus Christi, TX</strong><br>This poem is dedicated to my best friend, Raul Ramirez III. He passed away August 17, 2000. This poem depicts the misery and pain inflicted to the heart and soul from people and things around us. But even in the worst pain, there is always peace in the end.</p><p class="meta pub">First published in <em>Woven Magic</em>, The International Library of Poetry (poetry.com), 2001. ISBN 1-58235-557-6.</p><div class="pn"><span></span><span><a href="through-my-eyes.html">Through My Eyes &rarr;</a></span></div>
+</div></div></div></div>
+<div id="footer">&copy; JELI Writings<div class="credit">Pencil sound: &ldquo;Pencil Scratchings&rdquo; by gypsygirl (public domain).</div></div>
+</div></div>
+<button id="snd" type="button" aria-pressed="false" title="Pencil sound">&#9834; Pencil sound: off</button>
+<script>
+(function(){
+var root="../",key="jeliPencil",tkey="jeliPencilT",on=false,t0=0;
+try{on=localStorage.getItem(key)!=="off";t0=parseFloat(localStorage.getItem(tkey))||0}catch(e){on=true}
+var a=new Audio(root+"audio/pencil.ogg");a.loop=true;a.volume=0.35;a.preload="auto";
+var b=document.getElementById("snd");
+function label(p){b.textContent="♪ Pencil sound: "+(p?"on":(on?"tap to start":"off"));b.setAttribute("aria-pressed",p?"true":"false")}
+function start(){var r=a.play();if(r&&r.then){r.then(function(){label(true)}).catch(function(){label(false);arm()})}}
+function arm(){var h=function(){["pointerdown","keydown","touchstart"].forEach(function(e){document.removeEventListener(e,h)});if(on)start()};["pointerdown","keydown","touchstart"].forEach(function(e){document.addEventListener(e,h)})}
+a.addEventListener("loadedmetadata",function(){if(t0&&t0<a.duration)try{a.currentTime=t0}catch(e){}});
+b.addEventListener("click",function(){on=!on;try{localStorage.setItem(key,on?"on":"off")}catch(e){}if(on)start();else{a.pause();label(false)}});
+window.addEventListener("pagehide",function(){try{localStorage.setItem(tkey,String(a.currentTime||0))}catch(e){}});
+label(false);if(on)start();
+})();
+</script>
+</body></html>

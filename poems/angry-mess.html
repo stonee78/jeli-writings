@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Angry Mess | JELI Writings</title>
+<meta name="description" content="An angry mess is what&#x27;s left of it. I&#x27;ve tried and tried again to rid myself of this pain but it shifted.">
+<meta property="og:title" content="Angry Mess | JELI Writings"><meta property="og:description" content="An angry mess is what&#x27;s left of it. I&#x27;ve tried and tried again to rid myself of this pain but it shifted."><meta property="og:type" content="website">
+<link rel="stylesheet" href="../style.css">
+</head><body><div id="wrapper"><div id="container">
+<div class="title"><a href="../index.html">JELI Writings</a></div>
+<div id="header"><img src="../img/header.jpg" alt="A path through a forest"></div>
+<div id="navigation"><ul><li><a href="../index.html">Home</a></li><li id="active"><a href="../poems.html">Poems</a></li></ul></div>
+<div id="contentbtm"><div id="contenttop"><div id="content"><div class="inner">
+<h1>Angry Mess</h1><p class="stanza">An angry mess is what&#x27;s left of it.<br>
+I&#x27;ve tried and tried again to rid myself of this pain but it shifted.<br>
+To what do I owe this weight that&#x27;s been chained to me.<br>
+Seems the older I get the more I can just live with it.<br>
+I can&#x27;t describe it really but if I saw it i&#x27;d Know.<br>
+It&#x27;s RED eyes, Ugly Head, with wings of a Crow.<br>
+To try and catch it is like pausing time.<br>
+That remote never works and yet I keep trying.<br>
+It&#x27;s a simple demon to remove but within it there lies,<br>
+Everything I stand for and most of my drive.<br>
+You see there can be no evil if there is no good.<br>
+Light wouldn&#x27;t shine if darkness never could.<br>
+As I read this back I see this picture I&#x27;ve realized,<br>
+Tomorrow hasn&#x27;t come yet and today was such a surprise.<br>
+Once more Ink has touched paper, the chains are shifting I sense.<br>
+That beast with wings of a crow has left it&#x27;s layer; let the healing commence.</p><p class="meta">2006</p><div class="pn"><span><a href="whats-that.html">&larr; What&#x27;s That</a></span><span><a href="torn.html">Torn &rarr;</a></span></div>
+</div></div></div></div>
+<div id="footer">&copy; JELI Writings<div class="credit">Pencil sound: &ldquo;Pencil Scratchings&rdquo; by gypsygirl (public domain).</div></div>
+</div></div>
+<button id="snd" type="button" aria-pressed="false" title="Pencil sound">&#9834; Pencil sound: off</button>
+<script>
+(function(){
+var root="../",key="jeliPencil",tkey="jeliPencilT",on=false,t0=0;
+try{on=localStorage.getItem(key)!=="off";t0=parseFloat(localStorage.getItem(tkey))||0}catch(e){on=true}
+var a=new Audio(root+"audio/pencil.ogg");a.loop=true;a.volume=0.35;a.preload="auto";
+var b=document.getElementById("snd");
+function label(p){b.textContent="♪ Pencil sound: "+(p?"on":(on?"tap to start":"off"));b.setAttribute("aria-pressed",p?"true":"false")}
+function start(){var r=a.play();if(r&&r.then){r.then(function(){label(true)}).catch(function(){label(false);arm()})}}
+function arm(){var h=function(){["pointerdown","keydown","touchstart"].forEach(function(e){document.removeEventListener(e,h)});if(on)start()};["pointerdown","keydown","touchstart"].forEach(function(e){document.addEventListener(e,h)})}
+a.addEventListener("loadedmetadata",function(){if(t0&&t0<a.duration)try{a.currentTime=t0}catch(e){}});
+b.addEventListener("click",function(){on=!on;try{localStorage.setItem(key,on?"on":"off")}catch(e){}if(on)start();else{a.pause();label(false)}});
+window.addEventListener("pagehide",function(){try{localStorage.setItem(tkey,String(a.currentTime||0))}catch(e){}});
+label(false);if(on)start();
+})();
+</script>
+</body></html>

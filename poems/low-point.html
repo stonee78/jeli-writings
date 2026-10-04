@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Low Point | JELI Writings</title>
+<meta name="description" content="Down, low, hurt, under the rug. How else can I explain me feeling like a slug.">
+<meta property="og:title" content="Low Point | JELI Writings"><meta property="og:description" content="Down, low, hurt, under the rug. How else can I explain me feeling like a slug."><meta property="og:type" content="website">
+<link rel="stylesheet" href="../style.css">
+</head><body><div id="wrapper"><div id="container">
+<div class="title"><a href="../index.html">JELI Writings</a></div>
+<div id="header"><img src="../img/header.jpg" alt="A path through a forest"></div>
+<div id="navigation"><ul><li><a href="../index.html">Home</a></li><li id="active"><a href="../poems.html">Poems</a></li></ul></div>
+<div id="contentbtm"><div id="contenttop"><div id="content"><div class="inner">
+<h1>Low Point</h1><p class="stanza">Down, low, hurt, under the rug.<br>
+How else can I explain me feeling like a slug.<br>
+In a world that seems to change seemingly is very real<br>
+But to my surprise this change is just what I feel.<br>
+This life is what you make of it, why is there a flaw?<br>
+Though were made in his image, perfect we never are.<br>
+It&#x27;s like a caged match in my mind, the winner is still trapped.<br>
+Only to find a new fight once the loser is adapt.<br>
+Can this get any easier, for it&#x27;s taking the life right out of me.<br>
+Just keep my head above water is what I must do to survive this beat.</p><p class="stanza">So many variables, like an algorithm in the making,<br>
+It may be rocket science but I must learn before I&#x27;m forsaken.<br>
+If not I, then no one will rescue me.<br>
+Wait, I&#x27;m lying, Jesus will always be there for me.<br>
+Its hard to trust in people, which makes my faith stronger.<br>
+Who else to put your trust in than an all knowing perfect Father.<br>
+This is my faith and it has been proven time again.<br>
+Something intangible that can only be experienced first hand.<br>
+This I cannot explain to people, but pray for them I must.<br>
+If their undoing is not knowing then I hope my poems will help them trust.</p><p class="stanza">In God, we strive to be, but not with malice, revenge or impurities.<br>
+But with an open heart to love all as He did for humanity.<br>
+I hope I&#x27;m revealed the beauty of the universe, galaxies, planets and black holes.<br>
+For the secrets of the universe and why we are, is the answer most of us want to know.<br>
+I leave u with this in mind, when questioned if there is a God, why for some its hard to believe.<br>
+Don&#x27;t think literally, open your mind.<br>
+Like Einstein said, &quot;The more we learn about the universe the more it becomes apparent what a higher power has achieved.&quot;</p><p class="meta">2010</p><div class="pn"><span><a href="listen.html">&larr; Listen</a></span><span><a href="time.html">Time &rarr;</a></span></div>
+</div></div></div></div>
+<div id="footer">&copy; JELI Writings<div class="credit">Pencil sound: &ldquo;Pencil Scratchings&rdquo; by gypsygirl (public domain).</div></div>
+</div></div>
+<button id="snd" type="button" aria-pressed="false" title="Pencil sound">&#9834; Pencil sound: off</button>
+<script>
+(function(){
+var root="../",key="jeliPencil",tkey="jeliPencilT",on=false,t0=0;
+try{on=localStorage.getItem(key)!=="off";t0=parseFloat(localStorage.getItem(tkey))||0}catch(e){on=true}
+var a=new Audio(root+"audio/pencil.ogg");a.loop=true;a.volume=0.35;a.preload="auto";
+var b=document.getElementById("snd");
+function label(p){b.textContent="♪ Pencil sound: "+(p?"on":(on?"tap to start":"off"));b.setAttribute("aria-pressed",p?"true":"false")}
+function start(){var r=a.play();if(r&&r.then){r.then(function(){label(true)}).catch(function(){label(false);arm()})}}
+function arm(){var h=function(){["pointerdown","keydown","touchstart"].forEach(function(e){document.removeEventListener(e,h)});if(on)start()};["pointerdown","keydown","touchstart"].forEach(function(e){document.addEventListener(e,h)})}
+a.addEventListener("loadedmetadata",function(){if(t0&&t0<a.duration)try{a.currentTime=t0}catch(e){}});
+b.addEventListener("click",function(){on=!on;try{localStorage.setItem(key,on?"on":"off")}catch(e){}if(on)start();else{a.pause();label(false)}});
+window.addEventListener("pagehide",function(){try{localStorage.setItem(tkey,String(a.currentTime||0))}catch(e){}});
+label(false);if(on)start();
+})();
+</script>
+</body></html>

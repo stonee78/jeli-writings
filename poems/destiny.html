@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Destiny | JELI Writings</title>
+<meta name="description" content="Chased to the end. Something so simple causes reality to bend.">
+<meta property="og:title" content="Destiny | JELI Writings"><meta property="og:description" content="Chased to the end. Something so simple causes reality to bend."><meta property="og:type" content="website">
+<link rel="stylesheet" href="../style.css">
+</head><body><div id="wrapper"><div id="container">
+<div class="title"><a href="../index.html">JELI Writings</a></div>
+<div id="header"><img src="../img/header.jpg" alt="A path through a forest"></div>
+<div id="navigation"><ul><li><a href="../index.html">Home</a></li><li id="active"><a href="../poems.html">Poems</a></li></ul></div>
+<div id="contentbtm"><div id="contenttop"><div id="content"><div class="inner">
+<h1>Destiny</h1><p class="stanza">Chased to the end.<br>
+Something so simple causes reality to bend.<br>
+I find myself in the middle of the end, that just began.<br>
+How do u fix something made to be broken.<br>
+Like a family tree, you see the lines but never next to kin.<br>
+Take my lies, take my deceit.<br>
+If I were me, straight to hell to feel the heat.<br>
+Unless the stars is where I reach.<br>
+But with two of us it feels like lead on my feet.<br>
+If it was obvious could I admit it?<br>
+Staring at promises in an empty pit.<br>
+Maybe written in stone where I can see,<br>
+but over my eyes is the veil of destiny.<br>
+Dreams of death and despair.<br>
+There in the back, a glimpse of hope, with a shiny glare.<br>
+I can&#x27;t give up, I won&#x27;t give in!<br>
+Passion to erupt, happiness without sin!</p><p class="meta">2011</p><div class="pn"><span><a href="time.html">&larr; Time</a></span><span><a href="enough.html">Enough &rarr;</a></span></div>
+</div></div></div></div>
+<div id="footer">&copy; JELI Writings<div class="credit">Pencil sound: &ldquo;Pencil Scratchings&rdquo; by gypsygirl (public domain).</div></div>
+</div></div>
+<button id="snd" type="button" aria-pressed="false" title="Pencil sound">&#9834; Pencil sound: off</button>
+<script>
+(function(){
+var root="../",key="jeliPencil",tkey="jeliPencilT",on=false,t0=0;
+try{on=localStorage.getItem(key)!=="off";t0=parseFloat(localStorage.getItem(tkey))||0}catch(e){on=true}
+var a=new Audio(root+"audio/pencil.ogg");a.loop=true;a.volume=0.35;a.preload="auto";
+var b=document.getElementById("snd");
+function label(p){b.textContent="♪ Pencil sound: "+(p?"on":(on?"tap to start":"off"));b.setAttribute("aria-pressed",p?"true":"false")}
+function start(){var r=a.play();if(r&&r.then){r.then(function(){label(true)}).catch(function(){label(false);arm()})}}
+function arm(){var h=function(){["pointerdown","keydown","touchstart"].forEach(function(e){document.removeEventListener(e,h)});if(on)start()};["pointerdown","keydown","touchstart"].forEach(function(e){document.addEventListener(e,h)})}
+a.addEventListener("loadedmetadata",function(){if(t0&&t0<a.duration)try{a.currentTime=t0}catch(e){}});
+b.addEventListener("click",function(){on=!on;try{localStorage.setItem(key,on?"on":"off")}catch(e){}if(on)start();else{a.pause();label(false)}});
+window.addEventListener("pagehide",function(){try{localStorage.setItem(tkey,String(a.currentTime||0))}catch(e){}});
+label(false);if(on)start();
+})();
+</script>
+</body></html>

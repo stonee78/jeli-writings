@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Content | JELI Writings</title>
+<meta name="description" content="Take a step to 10 yrs. Where do you see us?">
+<meta property="og:title" content="Content | JELI Writings"><meta property="og:description" content="Take a step to 10 yrs. Where do you see us?"><meta property="og:type" content="website">
+<link rel="stylesheet" href="../style.css">
+</head><body><div id="wrapper"><div id="container">
+<div class="title"><a href="../index.html">JELI Writings</a></div>
+<div id="header"><img src="../img/header.jpg" alt="A path through a forest"></div>
+<div id="navigation"><ul><li><a href="../index.html">Home</a></li><li id="active"><a href="../poems.html">Poems</a></li></ul></div>
+<div id="contentbtm"><div id="contenttop"><div id="content"><div class="inner">
+<h1>Content</h1><p class="stanza">Take a step to 10 yrs.<br>
+Where do you see us?<br>
+If you knew, would you have fear?<br>
+Memories of you and the girls are what ill have most.<br>
+Though us together 20 yrs is what I&#x27;ll boast.</p><p class="stanza">Do you see the chimes in the wind making their notes.<br>
+We&#x27;re at our 20th anniversary making a toast.<br>
+Here&#x27;s to all the good times and bad.<br>
+Cause without them our marriage we would not have.<br>
+Our girls. The best memories are to come.<br>
+When you hold your grandchild. Our babysitting days are not done.</p><p class="stanza">Will we grow old, sweeter like wine.<br>
+Of course everything changes with time.<br>
+But if we stick through these turns in our daily grind,<br>
+the happiness was always there, not hard to find.</p><p class="stanza">You with grey hair, me with a beard,<br>
+Thank God we made it, being old and lonely, I&#x27;ve always feared.</p><p class="stanza">Now gone, when I&#x27;m lowered I see you disappear.<br>
+Here&#x27;s a tissue, thought I told you for me shed no tears.<br>
+I&#x27;m sorry I left you, God said, the decisions&#x27; not mine.<br>
+But my love is still alive, it&#x27;s not bound by life, nor death or time.<br>
+Just know I&#x27;ll always be with you, I&#x27;ve said these things before.<br>
+I know what your thinking, but my dear, we can&#x27;t argue anymore!</p><p class="meta">2010</p><div class="pn"><span><a href="goodbye.html">&larr; Goodbye</a></span><span><a href="kids.html">Kids &rarr;</a></span></div>
+</div></div></div></div>
+<div id="footer">&copy; JELI Writings<div class="credit">Pencil sound: &ldquo;Pencil Scratchings&rdquo; by gypsygirl (public domain).</div></div>
+</div></div>
+<button id="snd" type="button" aria-pressed="false" title="Pencil sound">&#9834; Pencil sound: off</button>
+<script>
+(function(){
+var root="../",key="jeliPencil",tkey="jeliPencilT",on=false,t0=0;
+try{on=localStorage.getItem(key)!=="off";t0=parseFloat(localStorage.getItem(tkey))||0}catch(e){on=true}
+var a=new Audio(root+"audio/pencil.ogg");a.loop=true;a.volume=0.35;a.preload="auto";
+var b=document.getElementById("snd");
+function label(p){b.textContent="♪ Pencil sound: "+(p?"on":(on?"tap to start":"off"));b.setAttribute("aria-pressed",p?"true":"false")}
+function start(){var r=a.play();if(r&&r.then){r.then(function(){label(true)}).catch(function(){label(false);arm()})}}
+function arm(){var h=function(){["pointerdown","keydown","touchstart"].forEach(function(e){document.removeEventListener(e,h)});if(on)start()};["pointerdown","keydown","touchstart"].forEach(function(e){document.addEventListener(e,h)})}
+a.addEventListener("loadedmetadata",function(){if(t0&&t0<a.duration)try{a.currentTime=t0}catch(e){}});
+b.addEventListener("click",function(){on=!on;try{localStorage.setItem(key,on?"on":"off")}catch(e){}if(on)start();else{a.pause();label(false)}});
+window.addEventListener("pagehide",function(){try{localStorage.setItem(tkey,String(a.currentTime||0))}catch(e){}});
+label(false);if(on)start();
+})();
+</script>
+</body></html>

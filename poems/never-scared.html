@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Never Scared | JELI Writings</title>
+<meta name="description" content="Never scared you could say. But a lie is a lie">
+<meta property="og:title" content="Never Scared | JELI Writings"><meta property="og:description" content="Never scared you could say. But a lie is a lie"><meta property="og:type" content="website">
+<link rel="stylesheet" href="../style.css">
+</head><body><div id="wrapper"><div id="container">
+<div class="title"><a href="../index.html">JELI Writings</a></div>
+<div id="header"><img src="../img/header.jpg" alt="A path through a forest"></div>
+<div id="navigation"><ul><li><a href="../index.html">Home</a></li><li id="active"><a href="../poems.html">Poems</a></li></ul></div>
+<div id="contentbtm"><div id="contenttop"><div id="content"><div class="inner">
+<h1>Never Scared</h1><p class="stanza">Never scared you could say.<br>
+But a lie is a lie<br>
+even when there&#x27;s truth inside.<br>
+Wake up from darkness is what follows when one opens&#x27; their eyes.<br>
+A cloud shrouds your vision.<br>
+Look closer, He&#x27;s all smiles inside.<br>
+Did it kill him? Not hate, jealousy or death.<br>
+The one lesson learned, he fought it with every last breath.<br>
+What good is it to gain the world but lose your soul?<br>
+Borrowed from the Bible.<br>
+Don&#x27;t ignore it, change your goal.<br>
+Dark &amp; corruptible I once thought we were.<br>
+As judgement passed, a glimpse of Hell but with a scent of mir.<br>
+There is always a way back, it&#x27;s not too late!<br>
+If you can read this, you still have time!<br>
+Cease the hate!</p><div class="pn"><span><a href="in-a-hole.html">&larr; In a Hole</a></span><span><a href="new.html">New &rarr;</a></span></div>
+</div></div></div></div>
+<div id="footer">&copy; JELI Writings<div class="credit">Pencil sound: &ldquo;Pencil Scratchings&rdquo; by gypsygirl (public domain).</div></div>
+</div></div>
+<button id="snd" type="button" aria-pressed="false" title="Pencil sound">&#9834; Pencil sound: off</button>
+<script>
+(function(){
+var root="../",key="jeliPencil",tkey="jeliPencilT",on=false,t0=0;
+try{on=localStorage.getItem(key)!=="off";t0=parseFloat(localStorage.getItem(tkey))||0}catch(e){on=true}
+var a=new Audio(root+"audio/pencil.ogg");a.loop=true;a.volume=0.35;a.preload="auto";
+var b=document.getElementById("snd");
+function label(p){b.textContent="♪ Pencil sound: "+(p?"on":(on?"tap to start":"off"));b.setAttribute("aria-pressed",p?"true":"false")}
+function start(){var r=a.play();if(r&&r.then){r.then(function(){label(true)}).catch(function(){label(false);arm()})}}
+function arm(){var h=function(){["pointerdown","keydown","touchstart"].forEach(function(e){document.removeEventListener(e,h)});if(on)start()};["pointerdown","keydown","touchstart"].forEach(function(e){document.addEventListener(e,h)})}
+a.addEventListener("loadedmetadata",function(){if(t0&&t0<a.duration)try{a.currentTime=t0}catch(e){}});
+b.addEventListener("click",function(){on=!on;try{localStorage.setItem(key,on?"on":"off")}catch(e){}if(on)start();else{a.pause();label(false)}});
+window.addEventListener("pagehide",function(){try{localStorage.setItem(tkey,String(a.currentTime||0))}catch(e){}});
+label(false);if(on)start();
+})();
+</script>
+</body></html>

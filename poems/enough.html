@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enough | JELI Writings</title>
+<meta name="description" content="I thought it was enough. The hard work, determination and drive.">
+<meta property="og:title" content="Enough | JELI Writings"><meta property="og:description" content="I thought it was enough. The hard work, determination and drive."><meta property="og:type" content="website">
+<link rel="stylesheet" href="../style.css">
+</head><body><div id="wrapper"><div id="container">
+<div class="title"><a href="../index.html">JELI Writings</a></div>
+<div id="header"><img src="../img/header.jpg" alt="A path through a forest"></div>
+<div id="navigation"><ul><li><a href="../index.html">Home</a></li><li id="active"><a href="../poems.html">Poems</a></li></ul></div>
+<div id="contentbtm"><div id="contenttop"><div id="content"><div class="inner">
+<h1>Enough</h1><p class="stanza">I thought it was enough.<br>
+The hard work, determination and drive.<br>
+But I failed like a fish out of water trying to stay alive.<br>
+Tossed aside like leftover soup.<br>
+All my efforts meant nothing, like a gov&#x27;t after a coo.<br>
+Why didn&#x27;t I see this coming, were the teachers more enlightened than me?<br>
+Or did I not reach high enough, I shot for the clouds and all I got was the tree.<br>
+Compared to a fool, how could I not see it?<br>
+Tears in my eyes, this must be what it feels like to wanna quit.</p><p class="stanza">But I will do my time, punishment in this prison I&#x27;ve set.<br>
+Now released, how could I ever believe &quot;defeated&quot; is what I would get?<br>
+With a new mission in mind, sights set to the stars while I sing a new tune.<br>
+This lesson I&#x27;ve learned I took it to heart, now here we go to the next level, straight to the moon!</p><p class="meta">2011</p><div class="pn"><span><a href="destiny.html">&larr; Destiny</a></span><span><a href="wedding.html">Wedding &rarr;</a></span></div>
+</div></div></div></div>
+<div id="footer">&copy; JELI Writings<div class="credit">Pencil sound: &ldquo;Pencil Scratchings&rdquo; by gypsygirl (public domain).</div></div>
+</div></div>
+<button id="snd" type="button" aria-pressed="false" title="Pencil sound">&#9834; Pencil sound: off</button>
+<script>
+(function(){
+var root="../",key="jeliPencil",tkey="jeliPencilT",on=false,t0=0;
+try{on=localStorage.getItem(key)!=="off";t0=parseFloat(localStorage.getItem(tkey))||0}catch(e){on=true}
+var a=new Audio(root+"audio/pencil.ogg");a.loop=true;a.volume=0.35;a.preload="auto";
+var b=document.getElementById("snd");
+function label(p){b.textContent="♪ Pencil sound: "+(p?"on":(on?"tap to start":"off"));b.setAttribute("aria-pressed",p?"true":"false")}
+function start(){var r=a.play();if(r&&r.then){r.then(function(){label(true)}).catch(function(){label(false);arm()})}}
+function arm(){var h=function(){["pointerdown","keydown","touchstart"].forEach(function(e){document.removeEventListener(e,h)});if(on)start()};["pointerdown","keydown","touchstart"].forEach(function(e){document.addEventListener(e,h)})}
+a.addEventListener("loadedmetadata",function(){if(t0&&t0<a.duration)try{a.currentTime=t0}catch(e){}});
+b.addEventListener("click",function(){on=!on;try{localStorage.setItem(key,on?"on":"off")}catch(e){}if(on)start();else{a.pause();label(false)}});
+window.addEventListener("pagehide",function(){try{localStorage.setItem(tkey,String(a.currentTime||0))}catch(e){}});
+label(false);if(on)start();
+})();
+</script>
+</body></html>
